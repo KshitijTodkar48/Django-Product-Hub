@@ -1,0 +1,23 @@
+# Python
+*.pyc
+__pycache__/
+
+# Virtual Environment
+.venv/
+env/
+venv/
+
+# Django stuff
+db.sqlite3
+Mystore/media/
+staticfiles/
+
+# VSCode
+.vscode/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Tailwind (optional)
+Mystore/theme/static/
