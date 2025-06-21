@@ -5,5 +5,19 @@
 {% endblock %}
 
 {% block content %}
-    
+    <div class="min-h-[100vh] flex justify-center items-center">
+        <div class="bg-blue-900 flex gap-8 p-8 rounded-3xl">
+            <div> 
+                <img src="{{product.image.url}}" alt="" class="min-h-60 max-h-90 rounded-xl">
+            </div>
+            <div class="flex flex-col gap-3 justify-center"> 
+                <h2 class="text-4xl"> {{product.name}} </h2>
+                <p class="max-w-120 text-lg"> {{product.description}} </p>
+                <h3 class="text-3xl"> Price: {{product.price}} $ </h3>
+                <button type="button" class="bg-cyan-600 w-full pb-2 pt-1 text-xl rounded-md mt-2 cursor-pointer hover:bg-cyan-700">
+                    Buy
+                </button>
+            </div>
+        </div>
+    </div>
 {% endblock %}

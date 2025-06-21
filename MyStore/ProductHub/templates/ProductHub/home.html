@@ -8,7 +8,7 @@
     <h1 class="bg-blue-900 text-4xl text-center mb-5  pt-2 pb-4 font-semibold">
         Welcome to Product Hub
     </h1>
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 max-w-8xl px-10">
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 lg:max-w-5xl px-10">
         {% for product in products %}
             <div class = "w-70 border-white bg-blue-900 my-4 p-4 rounded-2xl flex flex-col justify-between">
                 <img src="{{product.image.url}}" alt="" class="h-60 rounded-xl">
