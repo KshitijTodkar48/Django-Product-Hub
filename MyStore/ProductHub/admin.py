@@ -11,7 +11,7 @@ class ProductAdmin(admin.ModelAdmin):
 
 class SellerAdmin(admin.ModelAdmin):
     list_display = ('name', 'location')
-    filter_horizontal = ('product',)
+    filter_horizontal = ('products',)
 
 class ProductCertificateAdmin(admin.ModelAdmin):
     list_display = ('product', 'certificate_number')

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}
+   Product Sellers
+{% endblock %}
+
+{% block content %}
+    <div class="m-10">
+        <form method="POST">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" class="cursor-pointer bg-blue-600 hover:bg-blue-700 px-5 py-1 mt-4 rounded-2xl">
+                 Search seller 
+            </button>
+        </form>
+    </div>
+    <div class="m-10">
+        {% if sellers %}
+            <h3 class="text-xl font-semibold"> Available Sellers: </h3>
+            <ul class="mx-5">
+                {% for seller in sellers %}
+                    <li class="mt-1"> {{ seller.name }} – {{ seller.location }} </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+{% endblock %}

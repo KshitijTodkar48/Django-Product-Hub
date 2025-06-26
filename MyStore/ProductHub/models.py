@@ -39,7 +39,7 @@ class Review(models.Model):
 class Seller(models.Model):
     name = models.CharField(max_length=100)
     location = models.CharField(max_length=100)
-    product = models.ManyToManyField(Product, related_name='seller')
+    products = models.ManyToManyField(Product, related_name='seller')
 
     def __str__(self):
         return self.name
@@ -53,4 +53,4 @@ class ProductCertificate(models.Model):
     valid_until = models.DateTimeField()
 
     def __str__(self):
-        return f'Certificate for {self.product.name} issued by {self.issued_date}'
+        return f'Certificate for {self.product.name} issued at {self.issued_date}'
